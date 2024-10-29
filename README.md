@@ -29,5 +29,3 @@ We use three benchmark datasets to define the OT problem, with experiments condu
 - **Impact of Feature Dimension**: ```bash plot-pdf-for-feature.py```
 - **Scalability**: ```bash plot-pdf-for_large-scale.py```
 
-### Results
-Detailed results and comparisons are presented in Section A.3 of the main document, highlighting the efficiency and effectiveness of the SSNS algorithm against the backdrop of established methods.
