@@ -20,12 +20,12 @@ We use three benchmark datasets to define the OT problem, with experiments condu
   
 ### Code on Experiments
 #### Retrieving Data for Different Algorithms:
-- **Comparative Experiments**: ```bash get-pkl-for-all.py```
-- **Impact of Feature Dimension**: ```bash get-pkl-for-feature.py```
-- **Scalability**: ```bash get-pkl-for-large-scale.py```
+- **Comparative Experiments**: ``` get-pkl-for-all.py```
+- **Impact of Feature Dimension**: ``` get-pkl-for-feature.py```
+- **Scalability**: ``` get-pkl-for-large-scale.py```
 
 #### Plotting from PKL Data：
-- **Comparative Experiments**: ```bash plot-pdf-for-all.py```
-- **Impact of Feature Dimension**: ```bash plot-pdf-for-feature.py```
-- **Scalability**: ```bash plot-pdf-for_large-scale.py```
+- **Comparative Experiments**: ``` plot-pdf-for-all.py```
+- **Impact of Feature Dimension**: ``` plot-pdf-for-feature.py```
+- **Scalability**: ``` plot-pdf-for_large-scale.py```
 
