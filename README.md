@@ -19,6 +19,8 @@ We use three benchmark datasets to define the OT problem, with experiments condu
 - **ImageNet**: ```train_feature```, ```train_feature_60``` and ```train_feature_90```
   
 ### Code on Experiments
+#### Convert ImageNet to feature vectors
+ ```feature.ipynb```
 #### Retrieving Data for Different Algorithms:
 - **Comparative Experiments**: ``` get-pkl-for-all.py```
 - **Impact of Feature Dimension**: ``` get-pkl-for-feature.py```
