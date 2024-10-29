@@ -15,8 +15,8 @@ We evaluate the SSNS algorithm's performance through various numerical experimen
 
 ### Datasets and Experiment Setup
 We use three benchmark datasets to define the OT problem, with experiments conducted on both (Fashion-)MNIST and ImageNet datasets:
-- **(Fashion-)MNIST**: Flat and normalized pixel values are used, employing either ℓ1-distances or squared Euclidean distances between pixels.
-- **ImageNet**: Images are processed through a ResNet18 network followed by dimension reduction to derive 30-dimensional feature vectors. Costs are calculated based on these features.
+- **(Fashion-)MNIST**: ```fashion``` and ```data_mnist```
+- **ImageNet**: ```train_feature```, ```train_feature_60``` and ```train_feature_90```
   
 ### Code on Experiments
 #### Retrieving Data for Different Algorithms:
