@@ -137,19 +137,19 @@ for reg in reg_list:
         for p_id, q_id in tqdm(zip(p_list, q_list), total=len(p_list),
                                desc=f"Processing MNIST data pairs for reg={reg}, metric={metric}"):
             M, a, b = example_MNIST(mndata, p_id, q_id, metric=metric)
-            identifier = f"MNIST_{p_id}_{q_id}_reg_{reg}_metric_{metric}"
+            identifier = f"MNIST_{p_id}_{q_id}"
             process_and_save(M, a, b, reg, identifier, method_names, metric)
 
         # FashionMNIST
         for p_id, q_id in tqdm(zip(p_list, q_list), total=len(p_list),
                                desc=f"Processing FashionMNIST data pairs for reg={reg}, metric={metric}"):
             M, a, b = example_FashionMNIST(fashionmndata, p_id, q_id, metric=metric)
-            identifier = f"FashionMNIST_{p_id}_{q_id}_reg_{reg}_metric_{metric}"
+            identifier = f"FashionMNIST_{p_id}_{q_id}"
             process_and_save(M, a, b, reg, identifier, method_names, metric)
 
         # Real ImagineNet data
         for feature_one, feature_two in tqdm(zip(feature_list_one, feature_list_two), total=len(feature_list_one),
                                              desc=f"Processing real data pairs for reg={reg}, metric={metric}"):
             M, a, b = example_real_data(base_path, feature_one, feature_two, metric=metric)
-            identifier = f"{feature_one}_{feature_two}_reg_{reg}_metric_{metric}"
+            identifier = f"{feature_one}_{feature_two}"
             process_and_save(M, a, b, reg, identifier, method_names, metric)

@@ -25,7 +25,7 @@ def load_results(identifier, norm, reg):
 
 def plot(identifier, cutoff_times, cutoff_iters, norm, reg):
     results = load_results(identifier, norm, reg)
-    base_pic_dir = f'./picsave-test1/{norm}/reg={reg}'
+    base_pic_dir = f'./picsave-test2/{norm}/reg={reg}'
     if not os.path.exists(base_pic_dir):
         os.makedirs(base_pic_dir)
 

@@ -4,7 +4,7 @@ import regot
 from tqdm import tqdm
 import pickle
 import time
-
+import os
 def example1(n, m):
     x1 = np.linspace(0.0, 5.0, num=n)
     x2 = np.linspace(0.0, 5.0, num=m)
@@ -25,6 +25,7 @@ method_functions = {
 }
 
 def process_and_save(M, a, b, reg, identifier, method_names):
+    os.makedirs('large-scale-result', exist_ok=True)
     results = []
     for method_name in tqdm(method_names, desc=f"Processing methods for {identifier}"):
         method = method_functions[method_name]

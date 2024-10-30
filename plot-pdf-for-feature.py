@@ -116,13 +116,13 @@ feature_list_one = ['train_feature1']
 feature_list_two = ['train_feature3']
 
 
-base_pkl_dirs = ['./feature-pkl-old/pkl-for-imagenet-90', './feature-pkl-old/pkl-for-imagenet-60']
-base_pic_dirs = ['./testfeature-pic/feature-pic-imagenet-90', './testfeature-pic/feature-pic-imagenet-60']
+base_pkl_dirs = ['./feature-pkl/pkl-for-imagenet-60', './feature-pkl/pkl-for-imagenet-90']
+base_pic_dirs = ['./testfeature-pic/feature-pic-imagenet-60', './testfeature-pic/feature-pic-imagenet-90']
 
 
-for reg in ['0.01', '0.001']:
+for reg in ['0.001']:
     for base_pkl_dir, base_pic_dir in zip(base_pkl_dirs, base_pic_dirs):
-        for norm in ['1-norm', '2-norm']:
+        for norm in ['1-norm']:
             for feature_one, feature_two in tqdm(zip(feature_list_one, feature_list_two), total=len(feature_list_one),
                                                  desc=f"Processing ImageNet features for reg={reg}, norm={norm}"):
                 identifier = f"{feature_one}_{feature_two}"

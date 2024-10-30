@@ -51,17 +51,22 @@ def process_and_save(M, a, b, reg, identifier, method_names, metric, save_path):
     norm_dir = '2-norm-square' if metric == 'euclidean' else '1-norm'
     base_save_path = os.path.join(save_path, f'reg={reg}', norm_dir)
     os.makedirs(base_save_path, exist_ok=True)
-    file_path = os.path.join(base_save_path, f'{identifier}.pkl')
+    file_path = os.path.join(base_save_path, f'{feature_one}_{feature_two}.pkl')
     with open(file_path, 'wb') as file:
         pickle.dump(results, file)
 
-base_paths = ['./train_feature_90', './train_feature_60', './train_feature']
-save_paths = ['./testfeature-pkl/pkl-for-imagenet-90', './testfeature-pkl/pkl-for-imagenet-60', './testfeature-pkl/ssns/pkl-for-imagenet']
-feature_list_one = ['train_feature1', 'train_feature1', 'train_feature1', 'train_feature1', 'train_feature1']
-feature_list_two = ['train_feature2', 'train_feature3', 'train_feature4', 'train_feature5', 'train_feature6']
-reg_list = [0.01, 0.001]
+base_paths = ['./train_feature_60', './train_feature_90']
+save_paths = ['./feature-pkl/pkl-for-imagenet-60', './feature-pkl/pkl-for-imagenet-90']
+# feature_list_one = ['train_feature1', 'train_feature1', 'train_feature1', 'train_feature1', 'train_feature1']
+# feature_list_two = ['train_feature2', 'train_feature3', 'train_feature4', 'train_feature5', 'train_feature6']
+# reg_list = [0.01, 0.001]
+# metrics = ['euclidean', 'cityblock']
+feature_list_one = ['train_feature1']
+feature_list_two = ['train_feature3']
+reg_list = [0.001]
+metrics = ['cityblock']
 method_names = ["BCD", "APDAGD", "Dual L-BFGS", "Newton", "SSNS"]
-metrics = ['euclidean', 'cityblock']
+
 
 for base_path, save_path in zip(base_paths, save_paths):
     for reg in reg_list:
