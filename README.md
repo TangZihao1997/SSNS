@@ -1,5 +1,5 @@
 # SSNS
-
+Code for Safe and Sparse Newton Method for Entropic-Regularized Optimal Transport.
 ## Environment
 Use the following commands to create a virtual environment and install necessary packages:
 
@@ -18,16 +18,16 @@ We use three benchmark datasets to define the OT problem, with experiments condu
 - **(Fashion-)MNIST**: ```fashion``` and ```data_mnist```
 - **ImageNet**: ```train_feature```, ```train_feature_60``` and ```train_feature_90```
   
-### Code on Experiments
-#### Convert ImageNet to feature vectors
- ```feature.ipynb```
-#### Retrieving Data for Different Algorithms:
+### Code for Experiments
+#### Convert ImageNet data to feature vectors
+ ```feature.py```
+#### Save runtime data for Different Algorithms:
 - **Comparative Experiments**: ``` get-pkl-for-all.py```
 - **Impact of Feature Dimension**: ``` get-pkl-for-feature.py```
 - **Scalability**: ``` get-pkl-for-large-scale.py```
 
-#### Plotting from PKL Data：
+#### Visualization
 - **Comparative Experiments**: ``` plot-pdf-for-all.py```
 - **Impact of Feature Dimension**: ``` plot-pdf-for-feature.py```
-- **Scalability**: ``` plot-pdf-for_large-scale.py```
+- **Scalability**: ``` plot-pdf-for-large-scale.py```
 
