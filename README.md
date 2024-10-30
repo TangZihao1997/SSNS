@@ -6,9 +6,8 @@ Use the following commands to create a virtual environment and install necessary
 ```bash
 conda create -n ssns
 conda activate ssns
-conda install python=3.10 numpy scipy matplotlib notebook ipywidgets
-pip install pot cvxpy clarabel scs qpsolvers python-mnist
-import regot
+conda install python=3.10 numpy scipy matplotlib seaborn pandas scikit-learn
+pip install regot python-mnist 
 ```
 ## Experiments
 We evaluate the SSNS algorithm's performance through various numerical experiments, focusing on entropic-regularized optimal transport (OT). We compare SSNS with other optimization methods, including the Sinkhorn algorithm, APDAGD, L-BFGS, and the globalized Newton method.
