@@ -17,7 +17,7 @@ plt.rcParams.update({
     'ytick.labelsize': 20
 })
 def load_results(identifier, norm, reg):
-    base_path = f'./data-save/{norm}/reg={reg}'
+    base_path = f'./save/{norm}/reg={reg}'
     with open(os.path.join(base_path, f'{identifier}.pkl'), 'rb') as file:
         results = pickle.load(file)
     return results
